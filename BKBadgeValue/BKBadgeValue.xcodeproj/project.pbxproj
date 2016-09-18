@@ -14,6 +14,9 @@
 		2467F4E71D8E80720018BD3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2467F4E51D8E80720018BD3E /* LaunchScreen.storyboard */; };
 		2467F4F21D8E80720018BD3E /* BKBadgeValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467F4F11D8E80720018BD3E /* BKBadgeValueTests.swift */; };
 		2467F4FD1D8E80720018BD3E /* BKBadgeValueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467F4FC1D8E80720018BD3E /* BKBadgeValueUITests.swift */; };
+		2467F50B1D8E80BD0018BD3E /* BKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2467F50A1D8E80BD0018BD3E /* BKTabBarController.swift */; };
+		2467F5111D8E80EE0018BD3E /* BKTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467F50E1D8E80EE0018BD3E /* BKTabbar.m */; };
+		2467F5121D8E80EE0018BD3E /* UITabBarItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2467F5101D8E80EE0018BD3E /* UITabBarItem+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		2467F4F81D8E80720018BD3E /* BKBadgeValueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BKBadgeValueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2467F4FC1D8E80720018BD3E /* BKBadgeValueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKBadgeValueUITests.swift; sourceTree = "<group>"; };
 		2467F4FE1D8E80720018BD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2467F50A1D8E80BD0018BD3E /* BKTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKTabBarController.swift; sourceTree = "<group>"; };
+		2467F50D1D8E80EE0018BD3E /* BKTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTabbar.h; sourceTree = "<group>"; };
+		2467F50E1D8E80EE0018BD3E /* BKTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTabbar.m; sourceTree = "<group>"; };
+		2467F50F1D8E80EE0018BD3E /* UITabBarItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+Extension.h"; sourceTree = "<group>"; };
+		2467F5101D8E80EE0018BD3E /* UITabBarItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+Extension.m"; sourceTree = "<group>"; };
+		2467F5131D8E81190018BD3E /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +106,15 @@
 		2467F4DB1D8E80720018BD3E /* BKBadgeValue */ = {
 			isa = PBXGroup;
 			children = (
+				2467F50C1D8E80EE0018BD3E /* Libs */,
 				2467F4DC1D8E80720018BD3E /* AppDelegate.swift */,
 				2467F4DE1D8E80720018BD3E /* ViewController.swift */,
+				2467F50A1D8E80BD0018BD3E /* BKTabBarController.swift */,
 				2467F4E01D8E80720018BD3E /* Main.storyboard */,
 				2467F4E31D8E80720018BD3E /* Assets.xcassets */,
 				2467F4E51D8E80720018BD3E /* LaunchScreen.storyboard */,
 				2467F4E81D8E80720018BD3E /* Info.plist */,
+				2467F5131D8E81190018BD3E /* bridge.h */,
 			);
 			path = BKBadgeValue;
 			sourceTree = "<group>";
@@ -123,6 +135,17 @@
 				2467F4FE1D8E80720018BD3E /* Info.plist */,
 			);
 			path = BKBadgeValueUITests;
+			sourceTree = "<group>";
+		};
+		2467F50C1D8E80EE0018BD3E /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				2467F50D1D8E80EE0018BD3E /* BKTabbar.h */,
+				2467F50E1D8E80EE0018BD3E /* BKTabbar.m */,
+				2467F50F1D8E80EE0018BD3E /* UITabBarItem+Extension.h */,
+				2467F5101D8E80EE0018BD3E /* UITabBarItem+Extension.m */,
+			);
+			path = Libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +287,9 @@
 			files = (
 				2467F4DF1D8E80720018BD3E /* ViewController.swift in Sources */,
 				2467F4DD1D8E80720018BD3E /* AppDelegate.swift in Sources */,
+				2467F5111D8E80EE0018BD3E /* BKTabbar.m in Sources */,
+				2467F5121D8E80EE0018BD3E /* UITabBarItem+Extension.m in Sources */,
+				2467F50B1D8E80BD0018BD3E /* BKTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.badgeValue.demo.BKBadgeValue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BKBadgeValue/bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -431,6 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.badgeValue.demo.BKBadgeValue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BKBadgeValue/bridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
